@@ -3,55 +3,31 @@
 ### To Do
 - [x] Discuss networking and the need for protocols
 - [x] TCP introduction
-- [ ] TCP demo
+- [x] TCP demo
 - [ ] HTTP fundamentals
 
-### Networking
-* computers connected together
-* every machine on the network can talk to any other machine on the network
-* each computer on the network has a unique address
-* IP Internet Protocol address 192.168.0.1
-* DNS lookup Domain Name Service
-* IPv4 version 4
-* IPv6 example: 2001:db8:3333:4444:5555:6666:7777:8888
+### What is networking?
+- Communication between machines on a network
 
-* Port uniquely idenities a running process on a computer
-* 65,535 ports to choose from
-* HTTP 80, HTTPS 443, Postgres 5432
-* Development ports: 3000 => 9000
-* Vagrantfile
+### What is a protocol?
+- A defined standard for how requests and responses are sent between network devices
 
-### Sending Data
-* chop the data into packets
+### Transport Layer Protocols
+- Break data into packets to be sent over the network layer
+- Give each packet a header with origin and destination
+- **UDP**: **U**ser **D**atagram **P**rotocol
+  - Smaller header size (8 bytes) which results in smaller packet sizes
+  - _Connectionless_ ie. there is no need to establish or maintain a connection
+  - No error recovery (any corrupted packets are discarded)
+  - Packets can arrive in any order
+  - Useful for streaming/low latency applications
+- **TCP**: **T**ransportation **C**ontrol **P**rotocol
+  - Larger header size (20 bytes)
+  - Requires a connection (3-way handshake)
+  - Corrupted packets are reported to the server and are re-sent
+  - Packets arrive in order
+  - Useful when guaranteed communication is needed
 
-### TCP
-* Transmission Control Protocol
-* has a triple handshake (has to have a connection)
-* security
-* lossless (lost packets are recovered)
-
-### UDP
-* User Datagram Protocol
-* connectionless
-* streaming
-* no lost packets are resent
-
-### Event-driven Programming
-* programming around events happening
-* event examples: button click, form submission, hovering over an HTML element
-* handled with callbacks
-* button.on('click', () => {})
-* form.on('submit', () => {})
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Useful Links
+* [OSI Model](https://en.wikipedia.org/wiki/OSI_model)
+* [Net package documentation](https://nodejs.org/api/net.html)

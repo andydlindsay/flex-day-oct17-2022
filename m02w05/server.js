@@ -11,8 +11,6 @@ const connections = [];
 server.on('connection', (connection) => {
   console.log('a new client has connected');
 
-  connection.username = 'Bob';
-
   // add the new connection to our connections array
   connections.push(connection);
 
@@ -40,4 +38,4 @@ server.on('connection', (connection) => {
 
 server.listen(port, () => {
   console.log(`server is listening on port ${port}`);
-}); // start the server up listening on port 3001
+}); // start the server up listening on the port specified

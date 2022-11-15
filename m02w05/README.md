@@ -1,4 +1,4 @@
-# W02D03 - Networking with TCP and HTTP
+# M02W05 - Networking with TCP and HTTP
 
 ### To Do
 - [x] Discuss networking and the need for protocols

@@ -91,6 +91,39 @@ app.post('/login', (req, res) => {
   res.redirect('/protected');
 });
 
+// GET /register
+app.get('/register', (req, res) => {
+  res.render('register');
+});
+
+// POST /register
+app.post('/register', (req, res) => {
+  // pull the email and password off the body object
+  const email = req.body.email;
+  const password = req.body.password;
+
+  // check if email or password is undefined (the client didn't provide a value)
+  if (!email || !password) {
+    return res.status(400).send('please provide an email and a password');
+  }
+
+  // create a random id
+  const id = Math.random().toString(36).substring(2, 5);
+
+  // create a new user object
+  const user = {
+    id: id,
+    email: email,
+    password: password
+  };
+
+  // add the new user object to `users`
+  users[id] = user;
+
+  // redirect the client to the login page
+  res.redirect('/login');
+});
+
 // POST /logout
 app.post('/logout', (req, res) => {
   // clear the user's cookie

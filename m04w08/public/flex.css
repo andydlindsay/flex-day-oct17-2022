@@ -3,6 +3,16 @@ body {
   color: white;
 }
 
+.new-box {
+  display: flex;
+}
+
+.parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .child {
   width: 150px;
   height: 150px;

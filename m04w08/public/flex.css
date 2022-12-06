@@ -1,0 +1,21 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.child {
+  width: 150px;
+  height: 150px;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}

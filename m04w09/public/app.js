@@ -6,7 +6,6 @@ $(document).ready(() => {
   $('<h2>'); // <h2></h2>
 
   // $('<h2>').addClass('heading').text('Welcome');
-
   // $(`<h2 class="heading">${greeting}</h2>`);
 
   const createDogElement = (dog) => {
@@ -64,7 +63,7 @@ $(document).ready(() => {
     console.log(data);
 
     // clear the name input
-    $("#new-dog").val('');
+    $("#name").val('');
 
     $.post('/dogs', data, (response) => {
       console.log('post response', response);

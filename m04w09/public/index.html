@@ -4,9 +4,32 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles.css"/>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- <script src="script.js"></script> -->
+  <script src="app.js"></script>
+
   <title>AJAX</title>
 </head>
 <body>
   <h2>Fun with AJAX!!</h2>
+
+  <form id="new-dog">
+    <label>Name</label>
+    <input id="name" name="name" value="starting value"/>
+    <br/>
+    <label>Breed</label>
+    <input name="breed" />
+    <br/>
+    <label>Weight</label>
+    <input name="weight" />
+    <br/>
+    <button type="submit">Create!</button>
+  </form>
+
+  <section id="dog-container"></section>
 </body>
 </html>

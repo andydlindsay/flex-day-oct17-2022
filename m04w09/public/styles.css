@@ -1,0 +1,22 @@
+.dog {
+  border: 2px solid red; 
+  color: green;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.dog header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.identity {
+  color: lightcoral;
+  opacity: .25;
+}
+
+hr {
+  border-color: hotpink;
+  border-width: 2px;
+}

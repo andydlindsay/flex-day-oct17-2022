@@ -1,0 +1,72 @@
+@import 'variables';
+
+// mixins / function
+@mixin make-square($num) {
+  height: 2 * $num;
+  width: 2 * $num;
+  font-size: $num;
+}
+
+.box {
+  @include make-square(10rem);
+}
+
+.small {
+  @include make-square(10px);
+}
+
+.medium {
+  @include make-square(30px);
+}
+
+.large {
+  @include make-square(50px);
+}
+
+.default {
+  font-size: 12px;
+  text-decoration: none;
+  color: $primary;
+}
+
+h1 {
+  font-size: 24px;
+  color: $font-color;
+  border: $border;
+}
+
+h2 {
+  @extend .default;
+  color: black;
+  padding: 20px;
+}
+
+header {
+  color: $primary;
+  font-size: 24px;
+
+  &:hover {
+    box-shadow: inset;
+  }
+
+  &.underline {
+    text-decoration: underline;
+  }
+
+  h2 {
+    color: firebrick;
+    font-size: 12px;
+
+    &:visited {
+      color: gray;
+    }
+
+    span {
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    color: yellow;
+  }
+}

@@ -1,0 +1,64 @@
+.box {
+  height: 20rem;
+  width: 20rem;
+  font-size: 10rem;
+}
+
+.small {
+  height: 20px;
+  width: 20px;
+  font-size: 10px;
+}
+
+.medium {
+  height: 60px;
+  width: 60px;
+  font-size: 30px;
+}
+
+.large {
+  height: 100px;
+  width: 100px;
+  font-size: 50px;
+}
+
+.default, h2 {
+  font-size: 12px;
+  text-decoration: none;
+  color: orange;
+}
+
+h1 {
+  font-size: 24px;
+  color: salmon;
+  border: solid 2px purple;
+}
+
+h2 {
+  color: black;
+  padding: 20px;
+}
+
+header {
+  color: orange;
+  font-size: 24px;
+}
+header:hover {
+  box-shadow: inset;
+}
+header.underline {
+  text-decoration: underline;
+}
+header h2 {
+  color: firebrick;
+  font-size: 12px;
+}
+header h2:visited {
+  color: gray;
+}
+header h2 span {
+  text-decoration: underline;
+}
+header p {
+  color: yellow;
+}

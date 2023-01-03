@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 24px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -15,11 +19,22 @@ header {
 
 section {
   border: 2px solid black;
+  /* width: 500px; */
+  /* height: 500px; */
+  font-size: 60px;
 }
 
 section div {
   height: 150px;
-  width: 150px;
+  /* height: 50%; */
+  /* height: 50vh; */
+  /* max-height: 300px; */
+  /* min-height: 150px; */
+  /* width: 150px; */
+  /* width: 10em; */
+  width: 10rem;
+  /* width: 25%; */
+  /* width: 50vw; */
   margin: 20px;
   line-height: 150px;
   display: inline-block;
@@ -31,3 +46,23 @@ footer {
   background-color: burlywood;
   height: 150px;
 }
+
+
+
+@media only screen and (max-width: 500px) {
+  section {
+    background-color: maroon;
+  }
+
+  section div {
+    text-decoration: overline;
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 800px) {
+  section {
+    background-color: green;
+  }
+}
+
+

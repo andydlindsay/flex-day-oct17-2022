@@ -16,8 +16,6 @@ const client = new Client(config);
 
 client.connect();
 
-client.query('SELECT * FROM users LIMIT 2').then(res => console.log(res.rows));
-
 /// Users
 
 /**

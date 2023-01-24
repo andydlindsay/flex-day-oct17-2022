@@ -1,9 +1,9 @@
 INSERT INTO users 
-  (name, email, password)
+  (id, name, email, password)
 VALUES 
-  ('Alice', 'alice@mail.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),
-  ('Bob', 'bob@mail.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),
-  ('Carol', 'carol@mail.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.');
+  (1, 'Alice', 'alice@mail.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),
+  (2, 'Bob', 'bob@mail.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.'),
+  (3, 'Carol', 'carol@mail.com', '$2a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.');
 
 INSERT INTO properties 
   (owner_id, title, description, thumbnail_photo_url, cover_photo_url, cost_per_night, parking_spaces, number_of_bathrooms, number_of_bedrooms, country, street, city, province, post_code)
@@ -12,7 +12,7 @@ VALUES
   (2, 'Blank Corner', 'description', 'thumbnail_image.jpeg', 'cover_image.jpeg', 85234, 6, 6, 7, 'Canada', '651 Nami Road', 'Bohbatev', 'Alberta', 'H0H 0H0'),
   (3, 'Habit Mix', 'description', 'thumbnail_image.jpeg', 'cover_image.jpeg', 46058, 0, 5, 6, 'Canada', '1650 Hejto Center', 'Genwezuj', 'Newfoundland and Labrador', 'H0H 0H0');
 
-INSERT INTO reservations
+INSERT INTO reservations 
   (start_date, end_date, property_id, guest_id)
 VALUES
   ('2023-01-11', '2023-01-13', 1, 2),

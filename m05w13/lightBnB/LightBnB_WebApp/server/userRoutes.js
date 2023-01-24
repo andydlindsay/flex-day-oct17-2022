@@ -1,5 +1,8 @@
 const bcrypt = require('bcrypt');
 
+// const database = require('./database'); // mocking
+// dependency injection
+
 module.exports = function(router, database) {
 
   // Create a new user
@@ -30,12 +33,15 @@ module.exports = function(router, database) {
         return user;
       }
       return null;
-    });
+    })
+    // .catch((err) => console.log(err));
   }
   exports.login = login;
 
   router.post('/login', (req, res) => {
-    const {email, password} = req.body;
+    // const {email, password} = req.body;
+    const email = req.body.email;
+    const password = req.body.password;
     login(email, password)
       .then(user => {
         if (!user) {

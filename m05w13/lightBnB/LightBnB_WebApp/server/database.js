@@ -16,6 +16,11 @@ const client = new Client(config);
 
 client.connect();
 
+// client.query('SELECT * FROM users LIMIT 5')
+//   .then((response) => {
+//     console.log(response.rows);
+//   });
+
 /// Users
 
 /**
@@ -24,17 +29,38 @@ client.connect();
  * @return {Promise<{}>} A promise to the user.
  */
 const getUserWithEmail = function(email) {
-  let user;
-  for (const userId in users) {
-    user = users[userId];
-    if (user.email.toLowerCase() === email.toLowerCase()) {
-      break;
-    } else {
-      user = null;
-    }
+  // return new Promise()
+  // return Promise.resolve()
+
+  return client.query('SELECT * FROM users WHERE email = $1;', [email])
+    .then((response) => {
+      return response.rows[0]; // user object OR undefined
+    });
+    // .then((user) => {
+    //   if (!user) {}
+    // });
+
+  // let user;
+  // for (const userId in users) {
+  //   user = users[userId];
+  //   // Alice@gmail.com alice@gmail.com
+  //   if (user.email.toLowerCase() === email.toLowerCase()) {
+  //     break;
+  //   } else {
+  //     user = null;
+  //   }
   }
-  return Promise.resolve(user);
-}
+
+  // return new Promise((resolve, reject) => {
+  //   resolve(user);
+  //   // reject(err);
+  // })
+    // .then((user) => {})
+    // .catch((err) => {});
+
+
+  // return Promise.resolve(user);
+// }
 exports.getUserWithEmail = getUserWithEmail;
 
 /**

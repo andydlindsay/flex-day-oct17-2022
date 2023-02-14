@@ -1,8 +1,8 @@
 import './App.css';
 
 import Header from './components/Header';
-import Content from './components/Content';
-import Counter from './components/Counter';
+// import Content from './components/Content';
+// import Counter from './components/Counter';
 import Form from './components/Form';
 
 const App = () => {
@@ -14,7 +14,9 @@ const App = () => {
   // has to return either jsx or null
   return (
     <>
-      {/* <Header secretMessage="drink your ovaltine"></Header> Header({secret:''}) */}
+      <Header secretMessage="drink your ovaltine"></Header>
+      {/* Header({secretMessage: 'drink your ovaltine'}) */}
+
       {/* <Header secretMessage="this is the about page"/> */}
 
       {/* { outputArr } */}

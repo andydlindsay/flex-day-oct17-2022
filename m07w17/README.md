@@ -9,30 +9,33 @@
 - [x] Passing actions down as props
 - [x] Storybook
 
-```js
-// ES6 object shorthand
-const username = "alice";
-const password = "1234";
+### Passing props with the spread operator
 
-const user = {
-  username,
-  password,
+- It's very common to pass down prop values from a source object
+- It's also very common to name the prop the same as the key in the object (eg. `username={obj.username}`)
+
+```jsx
+const sourceObj = {
+  username: "alice",
+  email: "alice@gmail.com",
 };
+
+// in component return
+<MyComponent username={sourceObj.username} email={sourceObj.email} />;
 ```
 
-```js
-App() {
-  const data = {};
+- We can use the spread operator (`...`) as a short-hand for this common pattern
 
-  Header() {
-    console.log(data); // {}
-  }
-  Footer() {
-    console.log(data); // reference error
-  }
-}
+```jsx
+<MyComponent
+  { ...sourceObj }
+/>
+
+// the above will output
+<MyComponent
+  username={sourceObj.username}
+  email={sourceObj.email}
+/>
 ```
 
-- App - state: todos[]
-  - TodoList - props: todos
-  - TodoForm - props: todos, state: form data
+- Keep in mind that this will spread ALL keys inside the source object (ie. if you only want to pass down _some_ key/value pairs, you'll have to do it individually)

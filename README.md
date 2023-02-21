@@ -9,3 +9,4 @@
 * [M05W12 - SQL from our Apps](/m05w12)
 * [BREAKOUT - LightBnB](/m05w13)
 * [M07W16 - React Fundamentals](/m07w16)
+* [M07W17 - Component-Based UI w/ React](/m07w17)

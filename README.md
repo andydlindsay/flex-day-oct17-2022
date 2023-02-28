@@ -10,3 +10,4 @@
 * [BREAKOUT - LightBnB](/m05w13)
 * [M07W16 - React Fundamentals](/m07w16)
 * [M07W17 - Component-Based UI w/ React](/m07w17)
+* [M07W18 - Data Fetching & Other Side Effects](/m07w18)

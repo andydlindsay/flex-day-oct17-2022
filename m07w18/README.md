@@ -8,6 +8,12 @@
 - [x] Dependencies
 - [x] _useEffect_ Flow
 
+```js
+useEffect(() => {}); // will be called on EVERY render
+useEffect(() => {}, [username]); // will be called on initial render and then only if `username` changes
+useEffect(() => {}, []); // will be called on initial render and then never again
+```
+
 ### Two Rules for Hooks
 1. Don't call Hooks inside loops, conditions, or nested functions. **Always use Hooks at the top level of your React functions.**
 2. Only call Hooks from React functions.

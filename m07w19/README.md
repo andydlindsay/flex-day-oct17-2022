@@ -1,26 +1,9 @@
-# M07W19 - Bootcamp Review
+# M07W19 - Program Review
 
 ### To Do
-- [ ] Build an Express app from scratch
-- [ ] Test Express app with Postman
-- [ ] Build a React app from scratch
-- [ ] Connect the two apps together
-- [ ] Discuss CORS
-- [ ] Run the `build` command
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- [x] Build an Express app from scratch
+- [x] Test Express app with Postman
+- [x] Build a React app from scratch
+- [x] Connect the two apps together
+- [x] Discuss CORS
+- [x] Run the `build` command

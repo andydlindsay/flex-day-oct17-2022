@@ -12,3 +12,4 @@
 * [M07W17 - Component-Based UI w/ React](/m07w17)
 * [M07W18 - Data Fetching & Other Side Effects](/m07w18)
 * [M07W19 - Bootcamp Review](/m07w19)
+* [W08D02 - Unit & Integration Testing](/m08w20)

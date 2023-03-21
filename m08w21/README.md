@@ -9,9 +9,8 @@
 
 ### React Router
 * Uses the `react-router-dom` package
-* Inside of a `Router` component, you can use `Link` components to provide clickable links to the user
-* Inside of a `Switch`, the first `Route` whose `path` attribute matches the path the user is trying to visit gets rendered
-* Outside of a `Switch`, any `Route` whose `path` matches will render
+* Inside of a `BrowserRouter` component, you can use `Link` components to provide clickable links to the user
+* Inside of a `Routes`, the first `Route` whose `path` attribute matches the path the user is trying to visit gets rendered
 
 ```jsx
 <Router>
@@ -19,15 +18,11 @@
   <Link to="/about">About</Link>
   <Link to="/products">Products</Link>
 
-  <Switch>
-    <Route path="/about">
-      <About />
-    </Route>
-    { /* alternative syntax */ }
-    <Route path="/products" component={Products} />
-    { /* you can specify that a route must match specifically with the exact attribute */ }
-    <Route path="/" exact component={Home} />
-  </Switch>
+  <Routes>
+    <Route path="/about" element={<About />} />
+    <Route path="/products" element={<Products />} />
+    <Route path="/" element={<Home />} />
+  </Routes>
 <Router>
 ```
 
@@ -48,14 +43,10 @@ const Products = () => {
         <Link to="/products/5">Product #5</Link>
       </nav>
 
-      <Switch>
-        <Route path="/products/:productId">
-          <Product />
-        </Route>
-        <Route path="/products">
-          <h3>Please select a product above</h3>
-        </Route>
-      </Switch>
+      <Routes>
+        <Route path="/products/:productId" element={<Product />} />
+        <Route path="/products" element={<h3>Please select a product above</h3>} />
+      </Routes>
     </div>
   );
 };
@@ -76,16 +67,20 @@ const Product = () => {
 
 ### Programmatic Routing
 * `react-router` gives us another _custom hook_ that allows us to programmatically navigate through our app
-* `useHistory` gives us an object with a method called `push` which accepts a string
+* `useNavigate` gives us a function which accepts a string
 
 ```js
-import {useHistory} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
-// useHistory gives us back a history object
-const history = useHistory();
+// useNavigate gives us back a `navigate` function
+const navigate = useNavigate();
 
 // update the current url to '/about'
-history.push('/about');
+navigate('/about');
+
+// you can also use `navigate` to move a user forward and back
+navigate(1); // move forward one page
+navigate(-1); // move back one page
 ```
 
 ### Styled Components

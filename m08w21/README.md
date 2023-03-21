@@ -1,11 +1,11 @@
 # M08W21 - Real World React
 
 ### To Do
-- [ ] React Router
-- [ ] Styled Components
-- [ ] `useContext`
-- [ ] `useRef`
-- [ ] Component Libraries
+- [x] React Router
+- [x] Styled Components
+- [x] `useContext`
+- [x] `useRef`
+- [x] Component Libraries
 
 
 

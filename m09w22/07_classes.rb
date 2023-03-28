@@ -25,6 +25,7 @@ end
 my_car = Car.new('Toyota', 'Tercel', 1986)
 
 p my_car
+
 p my_car.make()
 my_car.make = 'Ford'
 p my_car

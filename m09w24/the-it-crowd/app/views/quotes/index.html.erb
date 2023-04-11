@@ -1,0 +1,11 @@
+<h1>All the quotes from <%= @character.name %></h1>
+
+<%= link_to "All the characters", characters_path %>
+
+<% @quotes.each do |quote| %>
+  <div class="quote">
+    <h2>Email: <%= quote.email %></h2>
+    <h2>Quote: <%= quote.quote %></h2>
+    <h2>Character: <%= quote.character.name %></h2>
+  </div>
+<% end %>
